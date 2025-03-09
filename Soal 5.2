@@ -1,0 +1,21 @@
+def cek_digit_belakang(angka_pertama, angka_kedua, angka_ketiga):
+    
+    # Cek angka kalau sesuai dengan ketentuan
+    if not (0 <= angka_pertama < 100000 and 0 <= angka_kedua < 100000 and 0 <= angka_ketiga < 100000):
+        return "Angka harus 0-99999!"
+
+    # Pengambilan digit terakhir
+    digit1, digit2, digit3 = angka_pertama % 10, angka_kedua % 10, angka_ketiga % 10
+
+    # Cek apakah minimal dua angka memiliki digit terakhir yang sama
+    return (digit1 == digit2) or (digit1 == digit3) or (digit2 == digit3)
+
+# Input dan pengecekan jika error
+try:
+    angka1 = int(input('Masukkan angka pertama:'))
+    angka2 = int(input('Masukkan angka kedua:'))
+    angka3 = int(input('Masukkan angka ketiga:'))
+
+    print(cek_digit_belakang(angka1, angka2, angka3))
+except ValueError:
+    print("Input harus berupa angka!")
