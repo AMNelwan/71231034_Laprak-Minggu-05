@@ -1,0 +1,12 @@
+def cek_angka(angka_pertama, angka_kedua, angka_ketiga):
+
+    if angka_pertama != angka_kedua != angka_ketiga:
+        if angka_pertama + angka_kedua == angka_ketiga or angka_pertama + angka_ketiga == angka_kedua or angka_kedua + angka_ketiga == angka_pertama:
+            return True
+    return False
+
+angkapertama = int(input('Masukkan angka pertama:'))
+angkakedua = int(input('Masukkan angka kedua:'))
+angkaketiga = int(input('Masukkan angka ketiga:'))
+
+print(cek_angka(angkapertama, angkakedua, angkaketiga))
